@@ -24,12 +24,10 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-
-            # Install Salesforce CLI
-      - name: Install Salesforce CLI
-        run: |
-             sudo yarn global add sfdx-cli@latest
-
+    
+      - name: Salesforce SFDX CLI Action
+        uses: sfdx-actions/setup-sfdx@v1
+  
       - name: Run a one-line script
         run: |
               export DEBUG=*
