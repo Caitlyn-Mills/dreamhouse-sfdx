@@ -19,7 +19,7 @@ jobs:
       inputs:
         action: 'Create'
         config_file_path: 'config/project-scratch-def.json'
-        alias: 'scratchorg'
+        alias: 'aliasnametest'
         devhub_alias: 'DevHub'
         maintainorg: 'delete'
     - task: sfpowerscript-deploysourcetoorg-task@10
