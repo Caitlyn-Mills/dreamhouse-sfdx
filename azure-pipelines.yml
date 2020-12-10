@@ -5,21 +5,21 @@ jobs:
   pool:
     vmImage: 'ubuntu-latest'
   steps:
-    - task: sfpwowerscript-installsfdx-task@7
-      displayName: 'Install SalesforceDX'
+    - task: sfpwowerscript-installsfdx-task@8
     - task: sfpwowerscript-authenticateorg-task@9
-      displayName: 'Authenticate against DevHub Org'
       inputs:
-        method: 'ServiceConnection'
-        salesforce_connection: 'Empathetic Unicorn'
-        alias: 'MCDDevHubOrg'
+        method: 'Credentials'
+        username: 'caitlyn.mills@accenture.com'
+        password: '$(password)'
+        alias: 'DevHub'
+        isdevhub: true
     - task: sfpwowerscript-managescratchorg-task@8
       displayName: 'Create scratch org: scratchorg'
       inputs:
         action: 'Create'
         config_file_path: 'config/project-scratch-def.json'
         alias: 'scratchorg'
-        devhub_alias: 'MCDDevHubOrg'
+        devhub_alias: 'DevHub'
         maintainorg: 'delete'
     - task: sfpowerscript-deploysourcetoorg-task@10
       displayName: 'Deploy metadata to org: scratchorg'
