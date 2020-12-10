@@ -25,7 +25,7 @@ jobs:
     - task: sfpowerscript-deploysourcetoorg-task@10
       displayName: 'Deploy metadata to org: scratchorg'
       inputs:
-        target_org: 'scratchorg'
+        target_org: 'aliasnametest'
         source_directory: 'force-app'
         checkonly: false
         wait_time: '20'
