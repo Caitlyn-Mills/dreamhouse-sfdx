@@ -5,8 +5,8 @@ jobs:
   pool:
     vmImage: 'ubuntu-latest'
   steps:
-    - task: sfpwowerscript-installsfdx-task@8
-    - task: sfpwowerscript-authenticateorg-task@9
+    - task: sfpwowerscript-installsfdx-task@9
+    - task: sfpwowerscript-authenticateorg-task@10
       inputs:
         method: 'Credentials'
         username: 'caitlyn.mills@accenture.com'
@@ -14,7 +14,7 @@ jobs:
         securitytoken: '$(token)'
         alias: 'DevHub'
         isdevhub: true
-    - task: sfpwowerscript-managescratchorg-task@8
+    - task: sfpwowerscript-managescratchorg-task@9
       displayName: 'Create scratch org: scratchorg'
       inputs:
         action: 'Create'
@@ -22,7 +22,7 @@ jobs:
         alias: 'aliasnametest'
         devhub_alias: 'DevHub'
         maintainorg: 'delete'
-    - task: sfpowerscript-deploysourcetoorg-task@10
+    - task: sfpowerscript-deploysourcetoorg-task@11
       displayName: 'Deploy metadata to org: scratchorg'
       inputs:
         target_org: 'aliasnametest'
@@ -31,7 +31,7 @@ jobs:
         wait_time: '20'
         testlevel: 'NoTestRun'
         isToBreakBuildIfEmpty: true
-    - task: sfpwowerscript-validateapextestcoverage-task@4
+    - task: sfpwowerscript-validateapextestcoverage-task@5
       displayName: 'Verify code coverage of 75%'
       inputs:
         target_org: 'scratchorg'
