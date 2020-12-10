@@ -11,6 +11,7 @@ jobs:
         method: 'Credentials'
         username: 'caitlyn.mills@accenture.com'
         password: '$(password)'
+        securitytoken: '$(token)'
         alias: 'DevHub'
         isdevhub: true
     - task: sfpwowerscript-managescratchorg-task@8
