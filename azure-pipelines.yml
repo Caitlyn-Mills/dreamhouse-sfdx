@@ -34,5 +34,5 @@ jobs:
     - task: sfpwowerscript-validateapextestcoverage-task@5
       displayName: 'Verify code coverage of 75%'
       inputs:
-        target_org: 'scratchorg'
+        target_org: 'aliasnametest'
         test_coverage: '0'
