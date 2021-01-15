@@ -36,3 +36,11 @@ jobs:
       inputs:
         target_org: 'aliasnametest'
         test_coverage: '0'
+    - task: AzlamSalam.sfpowerscripts.sfpwowerscripts-analyzewithpmd-task.sfpwowerscripts-analyzewithpmd-task@8
+      displayName: 'Analyze Apex using PMD'
+      inputs:
+        directory: 'force-app-package_src_delta/force-app'
+        ruleset: Custom
+        rulesetpath: 'pmd-ruleset.xml'
+        version: '6.26.0'
+        isToBreakBuild: true
