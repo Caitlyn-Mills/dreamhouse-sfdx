@@ -40,4 +40,4 @@ jobs:
       inputs:
         directory: 
         ruleset: 'Custom'
-        rulesetpath: 'pmd-ruleset.xml'
+        rulesetpath: '/pmd-ruleset.xml'
