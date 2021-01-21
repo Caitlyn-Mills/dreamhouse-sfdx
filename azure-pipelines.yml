@@ -36,7 +36,7 @@ jobs:
       inputs:
         target_org: 'aliasnametest'
         test_coverage: '0'
-    - task: sfpwowerscripts-analyzewithpmd-task@9
+    - task: sfpwowerscripts-analyzewithpmd-task@8
       inputs:
         directory: 
         ruleset: 'Custom'
