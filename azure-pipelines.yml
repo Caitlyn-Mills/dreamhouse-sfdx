@@ -9,3 +9,4 @@ jobs:
     - task: sfpwowerscripts-analyzewithpmd-task@8
       inputs:
         format: html
+        outputPath: pmd-output.html
