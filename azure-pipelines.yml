@@ -8,6 +8,4 @@ jobs:
     - task: sfpwowerscript-installsfdx-task@9
     - task: sfpwowerscripts-analyzewithpmd-task@8
       inputs:
-        directory: 
-        ruleset: 'Custom'
-        rulesetpath: '/pmd-ruleset.xml'
+        format: html
